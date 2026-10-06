@@ -49,6 +49,35 @@ The transport protocol used for actual service communication may differ between 
 
 
 
+## Service Providers
+
+Each service provider is modeled as an independent service instance.
+
+A provider host provides one service type rather than hosting all service types.
+
+The initial Mininet network will contain multiple clients, a Service Registry, and multiple service-provider hosts.
+
+Example:
+
+h1 → Client 1
+h2 → Client 2
+h3 → Service Registry
+h4 → FILE Provider 1
+h5 → FILE Provider 2
+h6 → CHAT Provider 1
+h7 → VIDEO Provider 1
+
+Multiple providers may provide the same service. This allows the Service Registry to return multiple available providers for a requested service and allows provider failure and rediscovery to be demonstrated.
+
+For example:
+
+FILE Provider 1 → FILE → TCP → 10.0.0.4:5001
+FILE Provider 2 → FILE → TCP → 10.0.0.5:5001
+CHAT Provider 1 → CHAT → TCP → 10.0.0.6:5002
+VIDEO Provider 1 → VIDEO → UDP → 10.0.0.7:5003
+
+
+
 
 ## Provider Registration
 
@@ -188,3 +217,24 @@ VIDEO service:
 Client → Provider using UDP or another appropriate transport protocol
 
 The service discovery protocol remains UDP regardless of the transport protocol used by the actual service.
+
+
+## Provider Availability
+
+Service providers periodically send heartbeat messages to the Service Registry.
+
+Example:
+
+HEARTBEAT | Provider-A
+
+The Registry records the most recent heartbeat from each provider.
+
+If a provider fails to send a heartbeat within the configured timeout period, the Registry marks the provider as unavailable and excludes it from future discovery responses.
+
+
+
+## Provider Failure After Discovery
+
+If a client discovers a provider but the provider becomes unavailable before or during service communication, the client detects the communication failure and performs a new service discovery request.
+
+The client then selects an available provider from the new discovery response and retries the request.
