@@ -238,3 +238,50 @@ If a provider fails to send a heartbeat within the configured timeout period, th
 If a client discovers a provider but the provider becomes unavailable before or during service communication, the client detects the communication failure and performs a new service discovery request.
 
 The client then selects an available provider from the new discovery response and retries the request.
+
+
+
+
+
+## Mininet Topology and IP Addressing
+
+### Network Overview
+
+The system is implemented in a simulated network using Mininet. The topology consists of seven hosts connected through two OpenFlow switches, `s1` and `s2`. The switches are managed by an SDN controller using the OpenFlow protocol.
+
+The network uses the `10.0.0.0/24` subnet. Each host is assigned a static IP address to simplify service registration, discovery, and communication.
+
+### Host Configuration
+
+| Host | Role | IP Address | Service Port |
+|---|---|---|---|
+| h1 | Client 1 | 10.0.0.1 | — |
+| h2 | Client 2 | 10.0.0.2 | — |
+| h3 | Service Registry | 10.0.0.3 | UDP 5000 |
+| h4 | FILE Provider 1 | 10.0.0.4 | TCP 5001 |
+| h5 | FILE Provider 2 | 10.0.0.5 | TCP 5001 |
+| h6 | CHAT Provider 1 | 10.0.0.6 | TCP 5002 |
+| h7 | VIDEO Provider 1 | 10.0.0.7 | UDP 5003 |
+
+The Service Registry listens for registration, heartbeat, and discovery messages on UDP port 5000. Provider service ports are separate from the Registry's discovery port.
+
+### Topology and Connectivity
+
+The hosts are connected to the switches as follows:
+
+- **Switch s1:** Connects h1, h2, and h3.
+- **Switch s2:** Connects h4, h5, h6, and h7.
+- **Inter-switch link:** Connects s1 and s2, allowing clients and the Registry to communicate with service providers across the network.
+- **SDN controller:** Controls s1 and s2 through OpenFlow and manages forwarding rules based on provider availability events.
+
+### SDN Integration
+
+The SDN controller manages the forwarding behaviour of the OpenFlow switches. When the Service Registry detects that a provider has become unavailable, it notifies the controller. The controller installs a provider-specific flow rule to block traffic to the unavailable service endpoint. When the provider becomes active again, the corresponding rule is removed.
+
+The Service Registry remains responsible for maintaining provider records and responding to discovery requests, while the SDN controller manages network-level traffic rules.
+
+### Design Scope
+
+The topology represents a single controlled network domain. Clients are configured with the Service Registry's address (`10.0.0.3:5000`) and do not need to know provider addresses in advance. Provider addresses and service ports are returned dynamically through discovery responses.
+
+The topology contains a single link between the two switches; therefore, the current design demonstrates provider-specific traffic filtering and service recovery rather than alternate-path rerouting.
