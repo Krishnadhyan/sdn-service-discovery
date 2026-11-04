@@ -1,0 +1,7 @@
+# Core and Benchmark Dependencies
+Pillow>=9.0.0
+
+# SDN Controller Dependencies (required in Linux / Mininet VM environment)
+# Mininet itself is installed via OS package: sudo apt install mininet
+os-ken>=2.6.0; sys_platform == "linux"
+

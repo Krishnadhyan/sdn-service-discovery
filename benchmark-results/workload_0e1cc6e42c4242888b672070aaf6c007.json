@@ -1,0 +1,1401 @@
+{
+  "configuration": {
+    "clients": [
+      "h1"
+    ],
+    "service": "FILE",
+    "requests_per_client": 20,
+    "concurrency_per_client": 1,
+    "mode": "concurrent",
+    "execution_mode": "dynamic",
+    "timeout": 2.0,
+    "experiment": "B1",
+    "selection_policy": "FIRST_AVAILABLE",
+    "registry_destination": {
+      "ip": "10.0.0.3",
+      "port": 5000
+    },
+    "static_provider": null
+  },
+  "summary": {
+    "success_rate_percent": 100.0,
+    "successful_requests_per_second": 99.366862177373,
+    "mean_discovery_latency_ms": 0.70975,
+    "mean_end_to_end_latency_ms": 5.87665
+  },
+  "run": {
+    "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+    "status": "completed",
+    "clients": [
+      "h1"
+    ],
+    "service": "FILE",
+    "requests_per_client": 20,
+    "concurrency_per_client": 1,
+    "mode": "concurrent",
+    "execution_mode": "dynamic",
+    "timeout": 2.0,
+    "experiment": "B1",
+    "registry_destination": {
+      "ip": "10.0.0.3",
+      "port": 5000
+    },
+    "static_provider": null,
+    "selection_policy": "FIRST_AVAILABLE",
+    "total_requests": 20,
+    "completed": 20,
+    "successful": 20,
+    "failed": 0,
+    "pending": 0,
+    "records": [
+      {
+        "request_id": "h1-request-000001",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.723+00:00",
+        "response_at": "2026-11-04T13:48:41.771+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 2.345,
+        "end_to_end_latency_ms": 47.907,
+        "latency_ms": 2.345,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.771+00:00"
+      },
+      {
+        "request_id": "h1-request-000002",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.771+00:00",
+        "response_at": "2026-11-04T13:48:41.782+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.519,
+        "end_to_end_latency_ms": 11.181,
+        "latency_ms": 0.519,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.782+00:00"
+      },
+      {
+        "request_id": "h1-request-000003",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.782+00:00",
+        "response_at": "2026-11-04T13:48:41.807+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.423,
+        "end_to_end_latency_ms": 24.774,
+        "latency_ms": 0.423,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.807+00:00"
+      },
+      {
+        "request_id": "h1-request-000004",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.807+00:00",
+        "response_at": "2026-11-04T13:48:41.823+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.592,
+        "end_to_end_latency_ms": 15.925,
+        "latency_ms": 0.592,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.823+00:00"
+      },
+      {
+        "request_id": "h1-request-000005",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.823+00:00",
+        "response_at": "2026-11-04T13:48:41.827+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 1.209,
+        "end_to_end_latency_ms": 3.339,
+        "latency_ms": 1.209,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.827+00:00"
+      },
+      {
+        "request_id": "h1-request-000006",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.827+00:00",
+        "response_at": "2026-11-04T13:48:41.828+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 1.209,
+        "end_to_end_latency_ms": 1.85,
+        "latency_ms": 1.209,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.828+00:00"
+      },
+      {
+        "request_id": "h1-request-000007",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.828+00:00",
+        "response_at": "2026-11-04T13:48:41.829+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.341,
+        "end_to_end_latency_ms": 0.616,
+        "latency_ms": 0.341,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.829+00:00"
+      },
+      {
+        "request_id": "h1-request-000008",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.829+00:00",
+        "response_at": "2026-11-04T13:48:41.830+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.239,
+        "end_to_end_latency_ms": 0.977,
+        "latency_ms": 0.239,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.830+00:00"
+      },
+      {
+        "request_id": "h1-request-000009",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.830+00:00",
+        "response_at": "2026-11-04T13:48:41.831+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.338,
+        "end_to_end_latency_ms": 0.528,
+        "latency_ms": 0.338,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.831+00:00"
+      },
+      {
+        "request_id": "h1-request-000010",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.831+00:00",
+        "response_at": "2026-11-04T13:48:41.832+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 1.136,
+        "end_to_end_latency_ms": 1.434,
+        "latency_ms": 1.136,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.832+00:00"
+      },
+      {
+        "request_id": "h1-request-000011",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.832+00:00",
+        "response_at": "2026-11-04T13:48:41.833+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 1.092,
+        "end_to_end_latency_ms": 1.323,
+        "latency_ms": 1.092,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.833+00:00"
+      },
+      {
+        "request_id": "h1-request-000012",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.833+00:00",
+        "response_at": "2026-11-04T13:48:41.834+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.298,
+        "end_to_end_latency_ms": 0.519,
+        "latency_ms": 0.298,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.834+00:00"
+      },
+      {
+        "request_id": "h1-request-000013",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.834+00:00",
+        "response_at": "2026-11-04T13:48:41.834+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.223,
+        "end_to_end_latency_ms": 0.41,
+        "latency_ms": 0.223,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.834+00:00"
+      },
+      {
+        "request_id": "h1-request-000014",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.834+00:00",
+        "response_at": "2026-11-04T13:48:41.835+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.28,
+        "end_to_end_latency_ms": 0.463,
+        "latency_ms": 0.28,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.835+00:00"
+      },
+      {
+        "request_id": "h1-request-000015",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.835+00:00",
+        "response_at": "2026-11-04T13:48:41.838+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 2.148,
+        "end_to_end_latency_ms": 3.214,
+        "latency_ms": 2.148,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.838+00:00"
+      },
+      {
+        "request_id": "h1-request-000016",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.838+00:00",
+        "response_at": "2026-11-04T13:48:41.839+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.304,
+        "end_to_end_latency_ms": 0.512,
+        "latency_ms": 0.304,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.839+00:00"
+      },
+      {
+        "request_id": "h1-request-000017",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.839+00:00",
+        "response_at": "2026-11-04T13:48:41.839+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.385,
+        "end_to_end_latency_ms": 0.758,
+        "latency_ms": 0.385,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.839+00:00"
+      },
+      {
+        "request_id": "h1-request-000018",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.839+00:00",
+        "response_at": "2026-11-04T13:48:41.840+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.481,
+        "end_to_end_latency_ms": 0.686,
+        "latency_ms": 0.481,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.840+00:00"
+      },
+      {
+        "request_id": "h1-request-000019",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.840+00:00",
+        "response_at": "2026-11-04T13:48:41.841+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.245,
+        "end_to_end_latency_ms": 0.507,
+        "latency_ms": 0.245,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.841+00:00"
+      },
+      {
+        "request_id": "h1-request-000020",
+        "client_hostname": "h1",
+        "client_ip": "10.0.0.1",
+        "service": "FILE",
+        "execution_mode": "dynamic",
+        "request": "PING",
+        "request_started_at": "2026-11-04T13:48:41.841+00:00",
+        "response_at": "2026-11-04T13:48:41.841+00:00",
+        "discovery_success": true,
+        "discovery_latency_ms": 0.388,
+        "end_to_end_latency_ms": 0.61,
+        "latency_ms": 0.388,
+        "providers": [
+          {
+            "id": "FILE-1",
+            "protocol": "TCP",
+            "ip": "10.0.0.4",
+            "port": 5001
+          },
+          {
+            "id": "FILE-2",
+            "protocol": "TCP",
+            "ip": "10.0.0.5",
+            "port": 5001
+          },
+          {
+            "id": "FILE-3",
+            "protocol": "TCP",
+            "ip": "10.0.0.8",
+            "port": 5001
+          }
+        ],
+        "provider_candidates": [
+          "FILE-1",
+          "FILE-2",
+          "FILE-3"
+        ],
+        "provider_attempts": [
+          {
+            "provider_id": "FILE-1",
+            "endpoint": {
+              "id": "FILE-1",
+              "protocol": "TCP",
+              "ip": "10.0.0.4",
+              "port": 5001
+            },
+            "status": "succeeded",
+            "error": null,
+            "response": "FILE-1 OK service=FILE request=PING"
+          }
+        ],
+        "selected_provider": "FILE-1",
+        "final_provider": {
+          "id": "FILE-1",
+          "protocol": "TCP",
+          "ip": "10.0.0.4",
+          "port": 5001
+        },
+        "provider_response": "FILE-1 OK service=FILE request=PING",
+        "success": true,
+        "outcome": "service_succeeded",
+        "error": null,
+        "run_id": "0e1cc6e42c4242888b672070aaf6c007",
+        "kind": "workload_request",
+        "timestamp": "2026-11-04T13:48:41.841+00:00"
+      }
+    ],
+    "started_at": 1793800121.6492593,
+    "error": null,
+    "finished_at": "2026-11-04T13:48:41.850+00:00",
+    "elapsed_seconds": 0.2012743439991027,
+    "success_rate_percent": 100.0,
+    "successful_requests_per_second": 99.366862177373,
+    "mean_discovery_latency_ms": 0.70975,
+    "mean_end_to_end_latency_ms": 5.87665
+  }
+}

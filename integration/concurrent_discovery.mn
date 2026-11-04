@@ -1,0 +1,17 @@
+h1 python3 /home/krishna-dhyan/Downloads/service_discovery_integration_final1/registry/tools/concurrent_discover.py --service FILE --count 40 --parallelism 8 > /tmp/discovery-h1.log 2>&1 &
+h2 python3 /home/krishna-dhyan/Downloads/service_discovery_integration_final1/registry/tools/concurrent_discover.py --service FILE --count 40 --parallelism 8 > /tmp/discovery-h2.log 2>&1 &
+h11 python3 /home/krishna-dhyan/Downloads/service_discovery_integration_final1/registry/tools/concurrent_discover.py --service FILE --count 40 --parallelism 8 > /tmp/discovery-h11.log 2>&1 &
+h12 python3 /home/krishna-dhyan/Downloads/service_discovery_integration_final1/registry/tools/concurrent_discover.py --service FILE --count 40 --parallelism 8 > /tmp/discovery-h12.log 2>&1 &
+h13 python3 /home/krishna-dhyan/Downloads/service_discovery_integration_final1/registry/tools/concurrent_discover.py --service FILE --count 40 --parallelism 8 > /tmp/discovery-h13.log 2>&1 &
+sh sleep 3
+sh cat /tmp/discovery-h1.log /tmp/discovery-h2.log /tmp/discovery-h11.log /tmp/discovery-h12.log /tmp/discovery-h13.log
+sh grep -q 'OK: 40 valid FILE discovery responses (40 discovered, 0 unavailable)' /tmp/discovery-h1.log && echo 'h1 responses: PASS' || echo 'h1 responses: FAIL'
+sh grep -q 'OK: 40 valid FILE discovery responses (40 discovered, 0 unavailable)' /tmp/discovery-h2.log && echo 'h2 responses: PASS' || echo 'h2 responses: FAIL'
+sh grep -q 'OK: 40 valid FILE discovery responses (40 discovered, 0 unavailable)' /tmp/discovery-h11.log && echo 'h11 responses: PASS' || echo 'h11 responses: FAIL'
+sh grep -q 'OK: 40 valid FILE discovery responses (40 discovered, 0 unavailable)' /tmp/discovery-h12.log && echo 'h12 responses: PASS' || echo 'h12 responses: FAIL'
+sh grep -q 'OK: 40 valid FILE discovery responses (40 discovered, 0 unavailable)' /tmp/discovery-h13.log && echo 'h13 responses: PASS' || echo 'h13 responses: FAIL'
+sh grep -q 'DISCOVER FILE from 10.0.0.1' /tmp/registry.log && echo 'Registry saw h1 (.1): PASS' || echo 'Registry saw h1: FAIL'
+sh grep -q 'DISCOVER FILE from 10.0.0.2' /tmp/registry.log && echo 'Registry saw h2 (.2): PASS' || echo 'Registry saw h2: FAIL'
+sh grep -q 'DISCOVER FILE from 10.0.0.11' /tmp/registry.log && echo 'Registry saw h11 (.11): PASS' || echo 'Registry saw h11: FAIL'
+sh grep -q 'DISCOVER FILE from 10.0.0.12' /tmp/registry.log && echo 'Registry saw h12 (.12): PASS' || echo 'Registry saw h12: FAIL'
+sh grep -q 'DISCOVER FILE from 10.0.0.13' /tmp/registry.log && echo 'Registry saw h13 (.13): PASS' || echo 'Registry saw h13: FAIL'

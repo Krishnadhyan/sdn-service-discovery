@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "service-discovery-sdn"
+version = "1.0.0"
+description = "SDN-Integrated Dynamic Service Discovery with OpenFlow Controller, Resilient Clients, and Real-Time Dashboard"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Service Discovery Team"}
+]
+keywords = [
+    "service-discovery",
+    "software-defined-networking",
+    "sdn",
+    "openflow",
+    "mininet",
+    "microservices",
+    "distributed-systems"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Distributed Computing",
+]
+dependencies = [
+    "Pillow>=9.0.0",
+]
+
+[project.optional-dependencies]
+sdn = [
+    "os-ken>=2.6.0; sys_platform == 'linux'",
+]
+dev = [
+    "pytest>=7.4.0",
+    "flake8>=6.1.0",
+    "ruff>=0.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "registry/tests", "benchmark/tests", "providers/tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
